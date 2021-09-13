@@ -3516,7 +3516,7 @@ var dark$7 = {
 };
 
 var light$6 = {
-    background: lightColors.backgroundAlt,
+    background: lightColors.cardBackground,
     boxShadow: shadows.level1,
     boxShadowActive: shadows.active,
     boxShadowSuccess: shadows.success,
@@ -3530,7 +3530,7 @@ var light$6 = {
     dropShadow: "drop-shadow(0px 1px 4px rgba(25, 19, 38, 0.15))",
 };
 var dark$6 = {
-    background: darkColors.backgroundAlt,
+    background: darkColors.cardBackground,
     boxShadow: shadows.level1,
     boxShadowActive: shadows.active,
     boxShadowSuccess: shadows.success,
