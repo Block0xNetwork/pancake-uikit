@@ -1415,7 +1415,7 @@ var getHeight = function (_a) {
             return "40px";
     }
 };
-var Input$1 = styled__default['default'].input(templateObject_1$_ || (templateObject_1$_ = __makeTemplateObject(["\n  background-color: ", ";\n  border: 0;\n  border-radius: 16px;\n  box-shadow: ", ";\n  color: ", ";\n  display: block;\n  font-size: 16px;\n  height: ", ";\n  outline: 0;\n  padding: 0 16px;\n  width: 100%;\n  border: 1px solid ", ";\n\n  &::placeholder {\n    color: ", ";\n  }\n\n  &:disabled {\n    background-color: ", ";\n    box-shadow: none;\n    color: ", ";\n    cursor: not-allowed;\n  }\n\n  &:focus:not(:disabled) {\n    box-shadow: ", ";\n  }\n"], ["\n  background-color: ", ";\n  border: 0;\n  border-radius: 16px;\n  box-shadow: ", ";\n  color: ", ";\n  display: block;\n  font-size: 16px;\n  height: ", ";\n  outline: 0;\n  padding: 0 16px;\n  width: 100%;\n  border: 1px solid ", ";\n\n  &::placeholder {\n    color: ", ";\n  }\n\n  &:disabled {\n    background-color: ", ";\n    box-shadow: none;\n    color: ", ";\n    cursor: not-allowed;\n  }\n\n  &:focus:not(:disabled) {\n    box-shadow: ", ";\n  }\n"])), function (_a) {
+var Input$1 = styled__default['default'].input(templateObject_1$_ || (templateObject_1$_ = __makeTemplateObject(["\n  background-color: ", ";\n  border: 0;\n  border-radius: 4px;\n  box-shadow: ", ";\n  color: ", ";\n  display: block;\n  font-size: 16px;\n  height: ", ";\n  outline: 0;\n  padding: 0 16px;\n  width: 100%;\n  border: 1px solid ", ";\n\n  &::placeholder {\n    color: ", ";\n  }\n\n  &:disabled {\n    background-color: ", ";\n    box-shadow: none;\n    color: ", ";\n    cursor: not-allowed;\n  }\n\n  // &:focus:not(:disabled) {\n  //   box-shadow: ", ";\n  // }\n"], ["\n  background-color: ", ";\n  border: 0;\n  border-radius: 4px;\n  box-shadow: ", ";\n  color: ", ";\n  display: block;\n  font-size: 16px;\n  height: ", ";\n  outline: 0;\n  padding: 0 16px;\n  width: 100%;\n  border: 1px solid ", ";\n\n  &::placeholder {\n    color: ", ";\n  }\n\n  &:disabled {\n    background-color: ", ";\n    box-shadow: none;\n    color: ", ";\n    cursor: not-allowed;\n  }\n\n  // &:focus:not(:disabled) {\n  //   box-shadow: ", ";\n  // }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.colors.input;
 }, getBoxShadow, function (_a) {
@@ -1449,7 +1449,7 @@ var UnitContainer = styled__default['default'](Text)(templateObject_2$t || (temp
     var theme = _a.theme;
     return theme.colors.textSubtle;
 });
-var StyledBalanceInput = styled__default['default'](Box)(templateObject_3$d || (templateObject_3$d = __makeTemplateObject(["\n  background-color: ", ";\n  border: 1px solid ", ";\n  border-radius: 16px;\n  box-shadow: ", ";\n  padding: 8px 16px;\n"], ["\n  background-color: ", ";\n  border: 1px solid ", ";\n  border-radius: 16px;\n  box-shadow: ", ";\n  padding: 8px 16px;\n"])), function (_a) {
+var StyledBalanceInput = styled__default['default'](Box)(templateObject_3$d || (templateObject_3$d = __makeTemplateObject(["\n  background-color: ", ";\n  border: 1px solid ", ";\n  border-radius: 8px;\n  box-shadow: ", ";\n  padding: 8px 16px;\n"], ["\n  background-color: ", ";\n  border: 1px solid ", ";\n  border-radius: 8px;\n  box-shadow: ", ";\n  padding: 8px 16px;\n"])), function (_a) {
     var theme = _a.theme;
     return theme.colors.input;
 }, function (_a) {
@@ -2094,11 +2094,13 @@ var LinkExternal = function (_a) {
 
 var variants$3 = {
     warning: {
-        background: "#FFB23719",
+        color: "#663c00",
+        background: "#fff4e5",
         borderColor: "warning",
     },
     danger: {
-        background: "#ED4B9E19",
+        color: "#611a15",
+        background: "#fdecea",
         borderColor: "failure",
     },
 };
@@ -2107,7 +2109,7 @@ var Icons$3 = {
     warning: Icon$n,
     danger: Icon$28,
 };
-var MessageContainer = styled__default['default'].div(templateObject_1$B || (templateObject_1$B = __makeTemplateObject(["\n  display: flex;\n  background-color: gray;\n  padding: 16px;\n  border-radius: 16px;\n  border: solid 1px;\n\n  ", "\n  ", "\n"], ["\n  display: flex;\n  background-color: gray;\n  padding: 16px;\n  border-radius: 16px;\n  border: solid 1px;\n\n  ", "\n  ",
+var MessageContainer = styled__default['default'].div(templateObject_1$B || (templateObject_1$B = __makeTemplateObject(["\n  display: flex;\n  background-color: gray;\n  padding: 16px;\n  border-radius: 4px;\n  border: solid 1px;\n\n  ", "\n  ", "\n"], ["\n  display: flex;\n  background-color: gray;\n  padding: 16px;\n  border-radius: 4px;\n  border: solid 1px;\n\n  ", "\n  ",
     "\n"])), styledSystem.space, styledSystem.variant({
     variants: variants$3,
 }));
@@ -3275,7 +3277,7 @@ var spacing = [0, 4, 8, 16, 24, 32, 48, 64];
 var radii = {
     small: "4px",
     default: "16px",
-    card: "32px",
+    card: "8px",
     circle: "50%",
 };
 var zIndices = {
@@ -3512,7 +3514,7 @@ var lightColors = __assign(__assign(__assign({}, baseColors), additionalColors),
         violetAlt: "linear-gradient(180deg, #CBD7EF 0%, #9A9FD0 100%)",
         gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
     } });
-var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), { secondary: "#9A6AFF", background: "#07162D", backgroundDisabled: "#C8D4E6", backgroundAlt: "#102648", cardBorder: "#F2F6FC", cardBackground: "#FFFFFF", contrast: "#FFFFFF", dropdown: "#1C3254", dropdownDeep: "#100C18", invertedContrast: "#191326", input: "#372F47", inputSecondary: "#262130", primaryDark: "#0098A1", tertiary: "#353547", text: "#708DB7", textDisabled: "#708DB7", textSubtle: "#749BD8", disabled: "#524B63", gradients: {
+var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), { secondary: "#9A6AFF", background: "#07162D", backgroundDisabled: "#C8D4E6", backgroundAlt: "#102648", cardBorder: "#F2F6FC", cardBackground: "#FFFFFF", contrast: "#FFFFFF", dropdown: "#1C3254", dropdownDeep: "#100C18", invertedContrast: "#191326", input: "#021127", inputSecondary: "#0E3382", primaryDark: "#0098A1", tertiary: "#E5EAF2", text: "#708DB7", textDisabled: "#708DB7", textSubtle: "#8f80ba", disabled: "#524B63", gradients: {
         bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
         inverseBubblegum: "linear-gradient(139.73deg, #3D2A54 0%, #313D5C 100%)",
         cardHeader: "linear-gradient(180deg, #071C3C 0%, #002B6F 100%)",
@@ -3592,7 +3594,7 @@ var light$1 = {
     background: lightColors.backgroundAlt,
 };
 var dark$1 = {
-    background: darkColors.backgroundAlt,
+    background: darkColors.cardBackground,
 };
 
 var light = {
@@ -3618,7 +3620,7 @@ var Arrow = styled__default['default'].div(templateObject_1$i || (templateObject
     var theme = _a.theme;
     return theme.tooltip.background;
 });
-var StyledTooltip = styled__default['default'].div(templateObject_2$a || (templateObject_2$a = __makeTemplateObject(["\n  padding: 16px;\n  font-size: 16px;\n  line-height: 130%;\n  border-radius: 16px;\n  max-width: 320px;\n  z-index: 101;\n  background: ", ";\n  color: ", ";\n  box-shadow: ", ";\n\n  &[data-popper-placement^=\"top\"] > ", " {\n    bottom: -4px;\n  }\n\n  &[data-popper-placement^=\"bottom\"] > ", " {\n    top: -4px;\n  }\n\n  &[data-popper-placement^=\"left\"] > ", " {\n    right: -4px;\n  }\n\n  &[data-popper-placement^=\"right\"] > ", " {\n    left: -4px;\n  }\n"], ["\n  padding: 16px;\n  font-size: 16px;\n  line-height: 130%;\n  border-radius: 16px;\n  max-width: 320px;\n  z-index: 101;\n  background: ", ";\n  color: ", ";\n  box-shadow: ", ";\n\n  &[data-popper-placement^=\"top\"] > ", " {\n    bottom: -4px;\n  }\n\n  &[data-popper-placement^=\"bottom\"] > ", " {\n    top: -4px;\n  }\n\n  &[data-popper-placement^=\"left\"] > ", " {\n    right: -4px;\n  }\n\n  &[data-popper-placement^=\"right\"] > ", " {\n    left: -4px;\n  }\n"])), function (_a) {
+var StyledTooltip = styled__default['default'].div(templateObject_2$a || (templateObject_2$a = __makeTemplateObject(["\n  padding: 16px;\n  font-size: 16px;\n  line-height: 130%;\n  border-radius: 4px;\n  max-width: 320px;\n  z-index: 101;\n  background: ", ";\n  color: ", ";\n  box-shadow: ", ";\n\n  &[data-popper-placement^=\"top\"] > ", " {\n    bottom: -4px;\n  }\n\n  &[data-popper-placement^=\"bottom\"] > ", " {\n    top: -4px;\n  }\n\n  &[data-popper-placement^=\"left\"] > ", " {\n    right: -4px;\n  }\n\n  &[data-popper-placement^=\"right\"] > ", " {\n    left: -4px;\n  }\n"], ["\n  padding: 16px;\n  font-size: 16px;\n  line-height: 130%;\n  border-radius: 4px;\n  max-width: 320px;\n  z-index: 101;\n  background: ", ";\n  color: ", ";\n  box-shadow: ", ";\n\n  &[data-popper-placement^=\"top\"] > ", " {\n    bottom: -4px;\n  }\n\n  &[data-popper-placement^=\"bottom\"] > ", " {\n    top: -4px;\n  }\n\n  &[data-popper-placement^=\"left\"] > ", " {\n    right: -4px;\n  }\n\n  &[data-popper-placement^=\"right\"] > ", " {\n    left: -4px;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.tooltip.background;
 }, function (_a) {
@@ -4825,12 +4827,6 @@ var connectorLocalStorageKey = "connectorIdv2";
 var walletLocalStorageKey = "wallet";
 
 var WalletButton = styled__default['default'](Button).attrs({ width: "100%", variant: "text", py: "16px" })(templateObject_1$3 || (templateObject_1$3 = __makeTemplateObject(["\n  align-items: center;\n  display: flex;\n  flex-direction: column;\n  height: auto;\n  justify-content: center;\n  margin-left: auto;\n  margin-right: auto;\n"], ["\n  align-items: center;\n  display: flex;\n  flex-direction: column;\n  height: auto;\n  justify-content: center;\n  margin-left: auto;\n  margin-right: auto;\n"])));
-var MoreWalletCard = function (_a) {
-    var t = _a.t, props = __rest(_a, ["t"]);
-    return (React__default['default'].createElement(WalletButton, __assign({ variant: "tertiary" }, props),
-        React__default['default'].createElement(Icon$19, { width: "40px", mb: "8px", color: "textSubtle" }),
-        React__default['default'].createElement(Text, { fontSize: "14px" }, t("More"))));
-};
 var WalletCard = function (_a) {
     var login = _a.login, walletConfig = _a.walletConfig, onDismiss = _a.onDismiss;
     var title = walletConfig.title, Icon = walletConfig.icon;
@@ -4877,25 +4873,23 @@ var getPreferredConfig = function (walletConfig) {
     ], sortedConfig.filter(function (sortedWalletConfig) { return sortedWalletConfig.title !== preferredWalletName; }));
 };
 var ConnectModal = function (_a) {
-    var login = _a.login, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b, _c = _a.displayCount, displayCount = _c === void 0 ? 3 : _c, t = _a.t;
-    var _d = React.useState(false), showMore = _d[0], setShowMore = _d[1];
-    var theme = styled.useTheme();
+    var login = _a.login, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b, _c = _a.displayCount, displayCount = _c === void 0 ? 3 : _c; _a.t;
+    var _d = React.useState(false), showMore = _d[0]; _d[1];
+    styled.useTheme();
     var sortedConfig = getPreferredConfig(connectors);
     var displayListConfig = showMore ? sortedConfig : sortedConfig.slice(0, displayCount);
     return (React__default['default'].createElement(ModalContainer, { minWidth: "320px" },
-        React__default['default'].createElement(ModalHeader, { background: getThemeValue("colors.gradients.bubblegum")(theme) },
+        React__default['default'].createElement(ModalHeader, null,
             React__default['default'].createElement(ModalTitle, null,
-                React__default['default'].createElement(Heading, null, t("Connect Wallet"))),
+                React__default['default'].createElement(Heading, null, "Connect Wallet")),
             React__default['default'].createElement(ModalCloseButton, { onDismiss: onDismiss })),
         React__default['default'].createElement(ModalBody, { width: ["320px", null, "340px"] },
             React__default['default'].createElement(WalletWrapper, { py: "24px", maxHeight: "453px", overflowY: "auto" },
-                React__default['default'].createElement(Grid, { gridTemplateColumns: "1fr 1fr" },
-                    displayListConfig.map(function (wallet) { return (React__default['default'].createElement(Box, { key: wallet.title },
-                        React__default['default'].createElement(WalletCard, { walletConfig: wallet, login: login, onDismiss: onDismiss }))); }),
-                    !showMore && React__default['default'].createElement(MoreWalletCard, { t: t, onClick: function () { return setShowMore(true); } }))),
+                React__default['default'].createElement(Grid, { gridTemplateColumns: "1fr 1fr" }, displayListConfig.map(function (wallet) { return (React__default['default'].createElement(Box, { key: wallet.title },
+                    React__default['default'].createElement(WalletCard, { walletConfig: wallet, login: login, onDismiss: onDismiss }))); }))),
             React__default['default'].createElement(Box, { p: "24px" },
-                React__default['default'].createElement(Text, { textAlign: "center", color: "textSubtle", as: "p", mb: "16px" }, t("Haven’t got a crypto wallet yet?")),
-                React__default['default'].createElement(Button, __assign({ as: "a", href: "https://docs.pancakeswap.finance/get-started/connection-guide", variant: "subtle", width: "100%" }, getExternalLinkProps()), t("Learn How to Connect"))))));
+                React__default['default'].createElement(Text, { textAlign: "center", color: "textSubtle", as: "p", mb: "16px" }, "Haven\u2019t got a crypto wallet yet?"),
+                React__default['default'].createElement(Button, __assign({ as: "a", href: "https://docs.pancakeswap.finance/get-started/connection-guide", variant: "secondary", width: "100%" }, getExternalLinkProps()), "Learn How to Connect")))));
 };
 var templateObject_1$2;
 
@@ -4946,18 +4940,18 @@ var CopyToClipboard = function (_a) {
 var templateObject_1$1, templateObject_2;
 
 var AccountModal = function (_a) {
-    var account = _a.account, logout = _a.logout, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b, t = _a.t;
-    return (React__default['default'].createElement(Modal, { title: t("Your wallet"), onDismiss: onDismiss },
+    var account = _a.account, logout = _a.logout, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b; _a.t;
+    return (React__default['default'].createElement(Modal, { title: "Your wallet", onDismiss: onDismiss },
         React__default['default'].createElement(Text, { fontSize: "20px", bold: true, style: { whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", marginBottom: "8px" } }, account),
         React__default['default'].createElement(Flex, { mb: "32px" },
-            React__default['default'].createElement(LinkExternal, { small: true, href: "https://bscscan.com/address/" + account, mr: "16px" }, t("View on BscScan")),
-            React__default['default'].createElement(CopyToClipboard, { toCopy: account }, t("Copy Address"))),
+            React__default['default'].createElement(LinkExternal, { small: true, href: "https://bscscan.com/address/" + account, mr: "16px" }, "View on BscScan"),
+            React__default['default'].createElement(CopyToClipboard, { toCopy: account }, "Copy Address")),
         React__default['default'].createElement(Flex, { justifyContent: "center" },
             React__default['default'].createElement(Button, { scale: "sm", variant: "secondary", onClick: function () {
                     logout();
                     window.localStorage.removeItem(connectorLocalStorageKey);
                     onDismiss();
-                } }, t("Logout")))));
+                } }, "Logout"))));
 };
 
 var useWalletModal = function (login, logout, t, account) {
