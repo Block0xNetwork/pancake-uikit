@@ -1417,7 +1417,7 @@ var getHeight = function (_a) {
 };
 var Input$1 = styled__default['default'].input(templateObject_1$_ || (templateObject_1$_ = __makeTemplateObject(["\n  background-color: ", ";\n  border: 0;\n  border-radius: 4px;\n  box-shadow: ", ";\n  color: ", ";\n  display: block;\n  font-size: 16px;\n  height: ", ";\n  outline: 0;\n  padding: 0 16px;\n  width: 100%;\n  border: 1px solid ", ";\n\n  &::placeholder {\n    color: ", ";\n  }\n\n  &:disabled {\n    background-color: ", ";\n    box-shadow: none;\n    color: ", ";\n    cursor: not-allowed;\n  }\n\n  // &:focus:not(:disabled) {\n  //   box-shadow: ", ";\n  // }\n"], ["\n  background-color: ", ";\n  border: 0;\n  border-radius: 4px;\n  box-shadow: ", ";\n  color: ", ";\n  display: block;\n  font-size: 16px;\n  height: ", ";\n  outline: 0;\n  padding: 0 16px;\n  width: 100%;\n  border: 1px solid ", ";\n\n  &::placeholder {\n    color: ", ";\n  }\n\n  &:disabled {\n    background-color: ", ";\n    box-shadow: none;\n    color: ", ";\n    cursor: not-allowed;\n  }\n\n  // &:focus:not(:disabled) {\n  //   box-shadow: ", ";\n  // }\n"])), function (_a) {
     var theme = _a.theme;
-    return theme.colors.input;
+    return theme.colors.cardBackground;
 }, getBoxShadow, function (_a) {
     var theme = _a.theme;
     return theme.colors.text;
@@ -3514,7 +3514,7 @@ var lightColors = __assign(__assign(__assign({}, baseColors), additionalColors),
         violetAlt: "linear-gradient(180deg, #CBD7EF 0%, #9A9FD0 100%)",
         gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
     } });
-var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), { secondary: "#9A6AFF", background: "#07162D", backgroundDisabled: "#C8D4E6", backgroundAlt: "#102648", cardBorder: "#F2F6FC", cardBackground: "#FFFFFF", contrast: "#FFFFFF", dropdown: "#1C3254", dropdownDeep: "#100C18", invertedContrast: "#191326", input: "#021127", inputSecondary: "#0E3382", primaryDark: "#0098A1", tertiary: "#E5EAF2", text: "#708DB7", textDisabled: "#708DB7", textSubtle: "#8f80ba", disabled: "#524B63", gradients: {
+var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), { secondary: "#9A6AFF", background: "#07162D", backgroundDisabled: "#C8D4E6", backgroundAlt: "#102648", cardBorder: "#F2F6FC", cardBackground: "#FFFFFF", contrast: "#FFFFFF", dropdown: "#1C3254", dropdownDeep: "#100C18", invertedContrast: "#191326", input: "#021127", inputSecondary: "#0E3382", primaryDark: "#0098A1", tertiary: "#E5EAF2", text: "#708DB7", textDisabled: "#708DB7", textSubtle: "#749BD8", disabled: "#F2F6FC", gradients: {
         bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
         inverseBubblegum: "linear-gradient(139.73deg, #3D2A54 0%, #313D5C 100%)",
         cardHeader: "linear-gradient(180deg, #071C3C 0%, #002B6F 100%)",
@@ -4827,6 +4827,12 @@ var connectorLocalStorageKey = "connectorIdv2";
 var walletLocalStorageKey = "wallet";
 
 var WalletButton = styled__default['default'](Button).attrs({ width: "100%", variant: "text", py: "16px" })(templateObject_1$3 || (templateObject_1$3 = __makeTemplateObject(["\n  align-items: center;\n  display: flex;\n  flex-direction: column;\n  height: auto;\n  justify-content: center;\n  margin-left: auto;\n  margin-right: auto;\n"], ["\n  align-items: center;\n  display: flex;\n  flex-direction: column;\n  height: auto;\n  justify-content: center;\n  margin-left: auto;\n  margin-right: auto;\n"])));
+var MoreWalletCard = function (_a) {
+    var t = _a.t, props = __rest(_a, ["t"]);
+    return (React__default['default'].createElement(WalletButton, __assign({ variant: "tertiary" }, props),
+        React__default['default'].createElement(Icon$19, { width: "40px", mb: "8px", color: "textSubtle" }),
+        React__default['default'].createElement(Text, { fontSize: "14px" }, t("More"))));
+};
 var WalletCard = function (_a) {
     var login = _a.login, walletConfig = _a.walletConfig, onDismiss = _a.onDismiss;
     var title = walletConfig.title, Icon = walletConfig.icon;
@@ -4873,8 +4879,8 @@ var getPreferredConfig = function (walletConfig) {
     ], sortedConfig.filter(function (sortedWalletConfig) { return sortedWalletConfig.title !== preferredWalletName; }));
 };
 var ConnectModal = function (_a) {
-    var login = _a.login, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b, _c = _a.displayCount, displayCount = _c === void 0 ? 3 : _c; _a.t;
-    var _d = React.useState(false), showMore = _d[0]; _d[1];
+    var login = _a.login, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b, _c = _a.displayCount, displayCount = _c === void 0 ? 3 : _c, t = _a.t;
+    var _d = React.useState(false), showMore = _d[0], setShowMore = _d[1];
     styled.useTheme();
     var sortedConfig = getPreferredConfig(connectors);
     var displayListConfig = showMore ? sortedConfig : sortedConfig.slice(0, displayCount);
@@ -4885,8 +4891,10 @@ var ConnectModal = function (_a) {
             React__default['default'].createElement(ModalCloseButton, { onDismiss: onDismiss })),
         React__default['default'].createElement(ModalBody, { width: ["320px", null, "340px"] },
             React__default['default'].createElement(WalletWrapper, { py: "24px", maxHeight: "453px", overflowY: "auto" },
-                React__default['default'].createElement(Grid, { gridTemplateColumns: "1fr 1fr" }, displayListConfig.map(function (wallet) { return (React__default['default'].createElement(Box, { key: wallet.title },
-                    React__default['default'].createElement(WalletCard, { walletConfig: wallet, login: login, onDismiss: onDismiss }))); }))),
+                React__default['default'].createElement(Grid, { gridTemplateColumns: "1fr 1fr" },
+                    displayListConfig.map(function (wallet) { return (React__default['default'].createElement(Box, { key: wallet.title },
+                        React__default['default'].createElement(WalletCard, { walletConfig: wallet, login: login, onDismiss: onDismiss }))); }),
+                    !showMore && React__default['default'].createElement(MoreWalletCard, { t: t, onClick: function () { return setShowMore(true); } }))),
             React__default['default'].createElement(Box, { p: "24px" },
                 React__default['default'].createElement(Text, { textAlign: "center", color: "textSubtle", as: "p", mb: "16px" }, "Haven\u2019t got a crypto wallet yet?"),
                 React__default['default'].createElement(Button, __assign({ as: "a", href: "https://docs.pancakeswap.finance/get-started/connection-guide", variant: "secondary", width: "100%" }, getExternalLinkProps()), "Learn How to Connect")))));
