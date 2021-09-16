@@ -1435,9 +1435,9 @@ var UnitContainer = styled(Text)(templateObject_2$s || (templateObject_2$s = __m
     var theme = _a.theme;
     return theme.colors.textSubtle;
 });
-var StyledBalanceInput = styled(Box)(templateObject_3$c || (templateObject_3$c = __makeTemplateObject(["\n  background-color: ", ";\n  border: 1px solid ", ";\n  border-radius: 8px;\n  box-shadow: ", ";\n  padding: 8px 16px;\n"], ["\n  background-color: ", ";\n  border: 1px solid ", ";\n  border-radius: 8px;\n  box-shadow: ", ";\n  padding: 8px 16px;\n"])), function (_a) {
+var StyledBalanceInput = styled(Box)(templateObject_3$c || (templateObject_3$c = __makeTemplateObject(["\n  background-color: ", ";\n  // border: 1px solid ", ";\n  border-radius: 8px;\n  box-shadow: ", ";\n  padding: 8px 16px;\n"], ["\n  background-color: ", ";\n  // border: 1px solid ", ";\n  border-radius: 8px;\n  box-shadow: ", ";\n  padding: 8px 16px;\n"])), function (_a) {
     var theme = _a.theme;
-    return theme.colors.input;
+    return theme.colors.cardBorder;
 }, function (_a) {
     var theme = _a.theme;
     return theme.colors.inputSecondary;
@@ -3127,7 +3127,7 @@ var getOutlineStyles = function (_a) {
     if (outline) {
         var themeColorKey = styleVariants[variantKey].backgroundColor;
         var color = theme.colors[themeColorKey];
-        return "\n      color: " + color + ";\n      background: " + theme.colors.background + ";\n      border: 2px solid " + color + ";\n    ";
+        return "\n      color: " + color + ";\n      // background: " + theme.colors.background + ";\n      border: 2px solid " + color + ";\n    ";
     }
     return "";
 };
@@ -3140,7 +3140,7 @@ var StyledTag = styled.div(templateObject_1$i || (templateObject_1$i = __makeTem
     prop: "scale",
     variants: scaleVariants,
 }), variant$1({
-    variants: styleVariants,
+// variants: styleVariants,
 }), space, typography, getOutlineStyles);
 var templateObject_1$i;
 
