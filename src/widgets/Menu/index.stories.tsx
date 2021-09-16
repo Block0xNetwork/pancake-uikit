@@ -14,9 +14,10 @@ import UserMenu from "./components/UserMenu";
 import { UserMenuDivider, UserMenuItem } from "./components/UserMenu/styles";
 import { variants, Variant } from "./components/UserMenu/types";
 import Menu from "./Menu";
-import { CogIcon, LanguageCurrencyIcon, LogoutIcon } from "../../components/Svg";
+import { CogIcon, LanguageCurrencyIcon, LoginIcon, LogoutIcon } from "../../components/Svg";
 import IconButton from "../../components/Button/IconButton";
 import { Modal, ModalProps, useModal } from "../Modal";
+import { LogoWithText } from "../../components/Svg";
 
 export default {
   title: "Widgets/Menu",
