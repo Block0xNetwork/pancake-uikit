@@ -2508,23 +2508,29 @@ var Icon$i = function (props) {
 };
 
 var Icon$h = function (props) {
-    return (React__default['default'].createElement(Svg, __assign({ viewBox: "0 0 128 128" }, props),
-        React__default['default'].createElement("svg", { width: "128", height: "128", viewBox: "0 0 128 128", fill: "none", xmlns: "http://www.w3.org/2000/svg" },
-            React__default['default'].createElement("path", { d: "M56.7204 37.5858C56.7204 45.3822 58.0271 54.1169 60.2906 60.8591C61.4246 64.2369 62.7705 67.0285 64.249 68.946C65.742 70.8826 67.1906 71.7103 68.5307 71.7103C71.1919 71.7103 74.4165 70.5307 77.8384 68.3524C81.235 66.1902 84.7001 63.1234 87.8127 59.5481C94.0844 52.3439 98.6784 43.3694 98.6784 35.942C98.6784 28.1653 97.1567 21.2636 93.9931 16.3543C90.8793 11.5222 86.1363 8.54284 79.3564 8.54284C72.6009 8.54284 66.9825 11.9157 63.0072 17.2564C59.0174 22.6164 56.7204 29.9263 56.7204 37.5858Z", fill: "#FEDC90", stroke: "#D1884F", strokeWidth: "2.89134" }),
-            React__default['default'].createElement("path", { d: "M32.7442 66.7859C39.4364 62.9222 47.2575 60.5211 53.8454 59.9252C57.1411 59.6272 60.0564 59.7876 62.336 60.3933C64.6294 61.0028 66.1079 62.0118 66.8368 63.2742C69.6116 68.0804 69.9429 76.4856 67.7501 84.8501C65.5656 93.1829 61.0085 100.957 54.6069 104.653C47.9434 108.5 40.9505 110.185 34.8292 109.454C28.7533 108.729 23.476 105.626 20.0729 99.7316C16.6658 93.8305 16.5364 87.5528 18.8757 81.7754C21.228 75.9659 26.1018 70.6209 32.7442 66.7859Z", fill: "#D1884F", stroke: "#633001", strokeWidth: "2.89134" }),
-            React__default['default'].createElement("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M73.6122 7.76013C69.4145 8.86483 64.8207 11.0867 61.24 16.1556C53.2804 27.4231 51.7006 41.9592 58.5495 60.7386C65.3984 79.518 63.3431 89.9236 56.0487 98.3189C48.7543 106.714 29.475 108.685 23.3482 101.929C21.8481 100.274 17.4954 97.4588 20.3675 102.54C23.2397 107.622 30.7527 111.748 39.59 111.748C48.4273 111.748 55.5943 108.146 61.958 101.338C68.3217 94.5306 74.292 78.3883 68.3268 61.7709C60.6331 40.3385 62.8311 27.508 68.2893 19.7815C71.0879 15.8198 75.5453 12.3629 78.6077 10.5868C81.8233 8.72183 84.8797 8.42294 86.8682 8.42294C83.3332 6.65548 77.8099 6.65542 73.6122 7.76013Z", fill: "#633001" }))));
+    return (React__default['default'].createElement(Svg, __assign({ viewBox: "0 0 99 99" }, props),
+        React__default['default'].createElement("svg", { width: "99", height: "99", viewBox: "0 0 99 99", fill: "none", xmlns: "http://www.w3.org/2000/svg" },
+            React__default['default'].createElement("defs", null,
+                React__default['default'].createElement("filter", { id: "filter-1" },
+                    React__default['default'].createElement("feColorMatrix", { in: "SourceGraphic", type: "matrix", values: "0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0" }))),
+            React__default['default'].createElement("g", { id: "p1", stroke: "none", "stroke-width": "1", fill: "none", "fill-rule": "evenodd" },
+                React__default['default'].createElement("g", { id: "pcopy", transform: "translate(-34.000000, -76.000000)" },
+                    React__default['default'].createElement("g", { id: "group", transform: "translate(32.000000, 74.000000)" },
+                        React__default['default'].createElement("g", { filter: "url(#filter-1)", id: "path-copy" },
+                            React__default['default'].createElement("g", { transform: "translate(50.628997, 50.964702) rotate(32.000000) translate(-50.628997, -50.964702) translate(14.128997, 13.964702)" },
+                                React__default['default'].createElement("path", { d: "M36.5284808,73.1835624 C16.3444254,73.1835624 0.144065215,56.9832022 0.144065215,36.7991469 C0.144065215,16.6150915 16.3444254,0.414731271 36.5284808,0.414731271 C43.699132,0.414731271 50.6042036,2.53936869 56.4469565,6.52306377 C57.7748548,7.31980283 58.0404345,8.91328087 57.2436955,10.2411792 C56.4469565,11.5690776 54.8534784,11.8346573 53.5255801,11.0379183 C48.4795663,7.58538251 42.3712337,5.99190447 36.2629011,5.99190447 C19.2658018,5.72632478 5.45565873,19.5364679 5.45565873,36.7991469 C5.45565873,54.0618258 19.5313815,67.8719689 36.5284808,67.8719689 C53.7911598,67.8719689 67.6013029,53.7962461 67.6013029,36.7991469 C67.6013029,35.7368282 67.6013029,34.6745094 67.3357232,33.6121908 C67.0701435,32.2842924 68.1324622,30.956394 69.7259403,30.6908143 C71.0538387,30.4252346 72.3817371,31.4875533 72.6473168,33.0810314 C72.6473168,34.4089298 72.9128964,35.4712485 72.9128964,36.7991469 C72.9128964,56.9832022 56.7125362,73.1835624 36.5284808,73.1835624 Z", id: "path", stroke: "#979797", "stroke-width": "8", fill: "#999999", "fill-rule": "nonzero" }))),
+                        React__default['default'].createElement("circle", { id: "circle", fill: "#FFFFFF", cx: "51", cy: "51", r: "14.1666667" })))))));
 };
 
 var rotate = styled.keyframes(templateObject_1$q || (templateObject_1$q = __makeTemplateObject(["\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n"], ["\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n"])));
 var float = styled.keyframes(templateObject_2$f || (templateObject_2$f = __makeTemplateObject(["\n\t0% {\n\t\ttransform: translatey(0px);\n\t}\n\t50% {\n\t\ttransform: translatey(10px);\n\t}\n\t100% {\n\t\ttransform: translatey(0px);\n\t}\n"], ["\n\t0% {\n\t\ttransform: translatey(0px);\n\t}\n\t50% {\n\t\ttransform: translatey(10px);\n\t}\n\t100% {\n\t\ttransform: translatey(0px);\n\t}\n"])));
 var Container$2 = styled__default['default'].div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  position: relative;\n"], ["\n  position: relative;\n"])));
 var RotatingPancakeIcon = styled__default['default'](Icon$h)(templateObject_4$5 || (templateObject_4$5 = __makeTemplateObject(["\n  position: absolute;\n  top: 0;\n  left: 0;\n  animation: ", " 2s linear infinite;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: absolute;\n  top: 0;\n  left: 0;\n  animation: ", " 2s linear infinite;\n  transform: translate3d(0, 0, 0);\n"])), rotate);
-var FloatingPanIcon = styled__default['default'](Icon$i)(templateObject_5$2 || (templateObject_5$2 = __makeTemplateObject(["\n  animation: ", " 6s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"], ["\n  animation: ", " 6s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"])), float);
+styled__default['default'](Icon$i)(templateObject_5$2 || (templateObject_5$2 = __makeTemplateObject(["\n  animation: ", " 6s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"], ["\n  animation: ", " 6s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"])), float);
 var Spinner = function (_a) {
     var _b = _a.size, size = _b === void 0 ? 128 : _b;
     return (React__default['default'].createElement(Container$2, null,
-        React__default['default'].createElement(RotatingPancakeIcon, { width: size * 0.5 + "px" }),
-        React__default['default'].createElement(FloatingPanIcon, { width: size + "px" })));
+        React__default['default'].createElement(RotatingPancakeIcon, { width: size * 1 + "px" })));
 };
 var templateObject_1$q, templateObject_2$f, templateObject_3$7, templateObject_4$5, templateObject_5$2;
 
