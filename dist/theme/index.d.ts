@@ -27,7 +27,7 @@ export interface PancakeTheme {
     zIndices: ZIndices;
 }
 export { default as dark } from "./dark";
-export { default as light } from "./light";
+export { default as light } from "./dark";
 export { lightColors } from "./colors";
 export { darkColors } from "./colors";
 export * from "./types";

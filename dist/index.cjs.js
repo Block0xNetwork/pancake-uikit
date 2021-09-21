@@ -3535,14 +3535,14 @@ var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), 
         gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
     } });
 
-var light$7 = {
+({
     background: lightColors.backgroundAlt,
-};
+});
 var dark$7 = {
     background: darkColors.backgroundAlt,
 };
 
-var light$6 = {
+({
     background: lightColors.cardBackground,
     boxShadow: shadows.level1,
     boxShadowActive: shadows.active,
@@ -3555,7 +3555,7 @@ var light$6 = {
         violet: lightColors.gradients.violet,
     },
     dropShadow: "drop-shadow(0px 1px 4px rgba(25, 19, 38, 0.15))",
-};
+});
 var dark$6 = {
     background: darkColors.cardBackground,
     boxShadow: shadows.level1,
@@ -3571,48 +3571,48 @@ var dark$6 = {
     dropShadow: "drop-shadow(0px 1px 4px rgba(25, 19, 38, 0.15))",
 };
 
-var light$5 = {
+({
     handleBackground: lightColors.backgroundAlt,
     handleShadow: lightColors.textDisabled,
-};
+});
 var dark$5 = {
     handleBackground: darkColors.backgroundAlt,
     handleShadow: darkColors.textDisabled,
 };
 
-var light$4 = {
+({
     handleBackground: lightColors.backgroundAlt,
-};
+});
 var dark$4 = {
     handleBackground: darkColors.backgroundAlt,
 };
 
-var light$3 = {
+({
     handleBackground: lightColors.backgroundAlt,
-};
+});
 var dark$3 = {
     handleBackground: darkColors.backgroundAlt,
 };
 
-var light$2 = {
+({
     background: lightColors.backgroundAlt,
-};
+});
 var dark$2 = {
     background: darkColors.backgroundAlt,
 };
 
-var light$1 = {
+({
     background: lightColors.backgroundAlt,
-};
+});
 var dark$1 = {
     background: darkColors.cardBackground,
 };
 
-var light = {
+({
     background: darkColors.backgroundAlt,
     text: darkColors.text,
     boxShadow: shadows.tooltip,
-};
+});
 var dark = {
     background: lightColors.backgroundAlt,
     text: lightColors.text,
@@ -3620,8 +3620,6 @@ var dark = {
 };
 
 var darkTheme = __assign(__assign({}, base), { isDark: true, alert: dark$7, colors: darkColors, card: dark$6, toggle: dark$3, nav: dark$2, modal: dark$1, pancakeToggle: dark$5, radio: dark$4, tooltip: dark });
-
-var lightTheme = __assign(__assign({}, base), { isDark: false, alert: light$7, colors: lightColors, card: light$6, toggle: light$3, nav: light$2, modal: light$1, pancakeToggle: light$5, radio: light$4, tooltip: light });
 
 var isTouchDevice = function () {
     return "ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
@@ -3645,7 +3643,7 @@ var templateObject_1$g, templateObject_2$9;
 
 var invertTheme = function (currentTheme) {
     if (currentTheme.isDark) {
-        return lightTheme;
+        return darkTheme;
     }
     return darkTheme;
 };
@@ -5046,7 +5044,7 @@ exports.byTextDescending = byTextDescending;
 exports.connectorLocalStorageKey = connectorLocalStorageKey;
 exports.dark = darkTheme;
 exports.darkColors = darkColors;
-exports.light = lightTheme;
+exports.light = darkTheme;
 exports.lightColors = lightColors;
 exports.makeRender = makeRender;
 exports.menuConfig = links;
