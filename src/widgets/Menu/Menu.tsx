@@ -13,6 +13,7 @@ import Logo from "./components/Logo";
 import { MENU_HEIGHT, MOBILE_MENU_HEIGHT } from "./config";
 import { NavProps } from "./types";
 import LangSelector from "../../components/LangSelector/LangSelector";
+import {Tag} from "../../components/Tag";
 
 const Wrapper = styled.div`
   position: relative;
@@ -111,12 +112,15 @@ const Menu: React.FC<NavProps> = ({
           {!isMobile && <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />}
         </Flex>
         <Flex alignItems="center">
-          {!isMobile && (
+          {/* {!isMobile && (
             <Box mr="12px">
               <CakePrice cakePriceUsd={cakePriceUsd} />
             </Box>
-          )}
-          <Box mt="4px">
+          )} */}
+          <Tag variant="success" outline mr="8px">
+            Beta Test
+          </Tag>
+          {/* <Box mt="4px">
             <LangSelector
               currentLang={currentLang}
               langs={langs}
@@ -125,7 +129,7 @@ const Menu: React.FC<NavProps> = ({
               color="textSubtle"
               hideLanguage
             />
-          </Box>
+          </Box> */}
           {globalMenu} {userMenu}
         </Flex>
       </StyledNav>

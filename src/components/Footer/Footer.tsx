@@ -40,11 +40,11 @@ const MenuItem: React.FC<FooterProps> = ({
           flexDirection={["column", null, "row"]}
           justifyContent="space-between"
           alignItems="flex-start"
-          mb={["42px", null, "36px"]}
+          mb={["42px", null, "0px"]}
         >
-          {items?.map((item) => (
+          {/* {items?.map((item) => (
             <StyledList key={item.label}>
-              <StyledListItem>{item.label}</StyledListItem>
+              <StyledListItem>{itelabel}</StyledListItem>
               {item.items?.map(({ label, href, isHighlighted = false }) => (
                 <StyledListItem key={label}>
                   <Link
@@ -59,13 +59,16 @@ const MenuItem: React.FC<FooterProps> = ({
                 </StyledListItem>
               ))}
             </StyledList>
-          ))}
+          ))} */}
+          <StyledSocialLinks order={[2]} pb={["42px", null, "32px"]} mb={["0", null, "0px"]} />
+
           <Box display={["none", null, "block"]}>
             <LogoWithTextIcon isDark width="160px" />
           </Box>
+
         </Flex>
-        <StyledSocialLinks order={[2]} pb={["42px", null, "32px"]} mb={["0", null, "32px"]} />
-        <StyledToolsContainer
+        {/* <StyledSocialLinks order={[2]} pb={["42px", null, "32px"]} mb={["0", null, "32px"]} /> */}
+        {/* <StyledToolsContainer
           order={[1, null, 3]}
           flexDirection={["column", null, "row"]}
           justifyContent="space-between"
@@ -94,7 +97,7 @@ const MenuItem: React.FC<FooterProps> = ({
               {buyCakeLabel}
             </Button>
           </Flex>
-        </StyledToolsContainer>
+        </StyledToolsContainer> */}
       </Flex>
     </StyledFooter>
   );
