@@ -47,10 +47,10 @@ export const Default: React.FC = () => {
       </Box>
       <Box>
         <Button mr="8px" disabled>
-          Disabled
+          Disabledsss
         </Button>
         <Button variant="secondary" disabled>
-          Disabled
+          sssss
         </Button>
       </Box>
     </>
