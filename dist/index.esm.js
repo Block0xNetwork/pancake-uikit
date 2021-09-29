@@ -3448,7 +3448,7 @@ var getOutlineStyles = function (_a) {
     if (outline) {
         var themeColorKey = styleVariants[variantKey].backgroundColor;
         var color = theme.colors[themeColorKey];
-        return "\n      color: " + color + ";\n      // background: " + theme.colors.background + ";\n      border: 2px solid " + color + ";\n    ";
+        return "\n      color: " + color + ";\n      // background: " + theme.colors.background + ";\n      border: 1px solid " + color + ";\n    ";
     }
     return "";
 };
@@ -3529,7 +3529,7 @@ var Handle = styled.div(templateObject_1$j || (templateObject_1$j = __makeTempla
     var theme = _a.theme;
     return theme.toggle.handleBackground;
 }, getScale("handleHeight"), getScale("handleLeft"), getScale("handleTop"), getScale("handleWidth"));
-var Input = styled.input(templateObject_2$d || (templateObject_2$d = __makeTemplateObject(["\n  cursor: pointer;\n  opacity: 0;\n  height: 100%;\n  position: absolute;\n  width: 100%;\n  z-index: 3;\n\n  &:checked + ", " {\n    left: ", ";\n  }\n\n  &:focus + ", " {\n    box-shadow: ", ";\n  }\n\n  &:hover + ", ":not(:disabled):not(:checked) {\n    box-shadow: ", ";\n  }\n"], ["\n  cursor: pointer;\n  opacity: 0;\n  height: 100%;\n  position: absolute;\n  width: 100%;\n  z-index: 3;\n\n  &:checked + ", " {\n    left: ", ";\n  }\n\n  &:focus + ", " {\n    box-shadow: ", ";\n  }\n\n  &:hover + ", ":not(:disabled):not(:checked) {\n    box-shadow: ", ";\n  }\n"])), Handle, getScale("checkedLeft"), Handle, function (_a) {
+var Input = styled.input(templateObject_2$d || (templateObject_2$d = __makeTemplateObject(["\n  cursor: pointer;\n  opacity: 0;\n  height: 100%;\n  position: absolute;\n  width: 100%;\n  z-index: 3;\n\n  &:checked + ", " {\n    left: ", ";\n  }\n\n  // &:focus + ", " {\n  //   box-shadow: ", ";\n  // }\n\n  // &:hover + ", ":not(:disabled):not(:checked) {\n  //   box-shadow: ", ";\n  // }\n"], ["\n  cursor: pointer;\n  opacity: 0;\n  height: 100%;\n  position: absolute;\n  width: 100%;\n  z-index: 3;\n\n  &:checked + ", " {\n    left: ", ";\n  }\n\n  // &:focus + ", " {\n  //   box-shadow: ", ";\n  // }\n\n  // &:hover + ", ":not(:disabled):not(:checked) {\n  //   box-shadow: ", ";\n  // }\n"])), Handle, getScale("checkedLeft"), Handle, function (_a) {
     var theme = _a.theme;
     return theme.shadows.focus;
 }, Handle, function (_a) {
@@ -3547,7 +3547,7 @@ var StyledToggle = styled.div(templateObject_3$5 || (templateObject_3$5 = __make
 var templateObject_1$j, templateObject_2$d, templateObject_3$5;
 
 var Toggle = function (_a) {
-    var checked = _a.checked, _b = _a.defaultColor, defaultColor = _b === void 0 ? "input" : _b, _c = _a.checkedColor, checkedColor = _c === void 0 ? "success" : _c, _d = _a.scale, scale = _d === void 0 ? scales.LG : _d, startIcon = _a.startIcon, endIcon = _a.endIcon, props = __rest(_a, ["checked", "defaultColor", "checkedColor", "scale", "startIcon", "endIcon"]);
+    var checked = _a.checked, _b = _a.defaultColor, defaultColor = _b === void 0 ? "cardBorder" : _b, _c = _a.checkedColor, checkedColor = _c === void 0 ? "primary" : _c, _d = _a.scale, scale = _d === void 0 ? scales.LG : _d, startIcon = _a.startIcon, endIcon = _a.endIcon, props = __rest(_a, ["checked", "defaultColor", "checkedColor", "scale", "startIcon", "endIcon"]);
     var isChecked = !!checked;
     return (React__default.createElement(StyledToggle, { "$checked": isChecked, "$checkedColor": checkedColor, "$defaultColor": defaultColor, scale: scale },
         React__default.createElement(Input, __assign({ checked: checked, scale: scale }, props, { type: "checkbox" })),
@@ -3827,7 +3827,7 @@ var lightColors = __assign(__assign(__assign({}, baseColors), additionalColors),
         violetAlt: "linear-gradient(180deg, #CBD7EF 0%, #9A9FD0 100%)",
         gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
     } });
-var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), { secondary: "#9A6AFF", background: "#151521", backgroundDisabled: "#1b1b29", backgroundAlt: "#1b1b28", cardBorder: "#2b2b40", cardBackground: "#1e1e2d", contrast: "#FFFFFF", dropdown: "#1C3254", dropdownDeep: "#100C18", invertedContrast: "#191326", input: "#021127", inputSecondary: "#0E3382", primaryDark: "#1b1b28", tertiary: "#E5EAF2", text: "#708DB7", textDisabled: "#708DB7", textSubtle: "#3699ff", disabled: "#F2F6FC", gradients: {
+var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), { secondary: "#92929f", background: "#151521", backgroundDisabled: "#1b1b29", backgroundAlt: "#1b1b28", cardBorder: "#2b2b40", cardBackground: "#1e1e2d", contrast: "#FFFFFF", dropdown: "#1C3254", dropdownDeep: "#100C18", invertedContrast: "#191326", input: "#021127", inputSecondary: "#0E3382", primaryDark: "#1b1b28", tertiary: "#E5EAF2", text: "#708DB7", textDisabled: "#708DB7", textSubtle: "#3699ff", disabled: "#F2F6FC", gradients: {
         bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
         inverseBubblegum: "linear-gradient(139.73deg, #3D2A54 0%, #313D5C 100%)",
         cardHeader: "linear-gradient(180deg, #071C3C 0%, #002B6F 100%)",
@@ -3927,17 +3927,8 @@ var isTouchDevice = function () {
     return "ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
 };
 
-var Arrow = styled.div(templateObject_1$i || (templateObject_1$i = __makeTemplateObject(["\n  &,\n  &::before {\n    position: absolute;\n    width: 10px;\n    height: 10px;\n    border-radius: 2px;\n    z-index: -1;\n  }\n\n  &::before {\n    content: \"\";\n    transform: rotate(45deg);\n    background: ", ";\n  }\n"], ["\n  &,\n  &::before {\n    position: absolute;\n    width: 10px;\n    height: 10px;\n    border-radius: 2px;\n    z-index: -1;\n  }\n\n  &::before {\n    content: \"\";\n    transform: rotate(45deg);\n    background: ", ";\n  }\n"])), function (_a) {
-    var theme = _a.theme;
-    return theme.tooltip.background;
-});
-var StyledTooltip = styled.div(templateObject_2$c || (templateObject_2$c = __makeTemplateObject(["\n  padding: 16px;\n  font-size: 16px;\n  line-height: 130%;\n  border-radius: 4px;\n  max-width: 320px;\n  z-index: 101;\n  background: ", ";\n  color: ", ";\n  box-shadow: ", ";\n\n  &[data-popper-placement^=\"top\"] > ", " {\n    bottom: -4px;\n  }\n\n  &[data-popper-placement^=\"bottom\"] > ", " {\n    top: -4px;\n  }\n\n  &[data-popper-placement^=\"left\"] > ", " {\n    right: -4px;\n  }\n\n  &[data-popper-placement^=\"right\"] > ", " {\n    left: -4px;\n  }\n"], ["\n  padding: 16px;\n  font-size: 16px;\n  line-height: 130%;\n  border-radius: 4px;\n  max-width: 320px;\n  z-index: 101;\n  background: ", ";\n  color: ", ";\n  box-shadow: ", ";\n\n  &[data-popper-placement^=\"top\"] > ", " {\n    bottom: -4px;\n  }\n\n  &[data-popper-placement^=\"bottom\"] > ", " {\n    top: -4px;\n  }\n\n  &[data-popper-placement^=\"left\"] > ", " {\n    right: -4px;\n  }\n\n  &[data-popper-placement^=\"right\"] > ", " {\n    left: -4px;\n  }\n"])), function (_a) {
-    var theme = _a.theme;
-    return theme.tooltip.background;
-}, function (_a) {
-    var theme = _a.theme;
-    return theme.tooltip.text;
-}, function (_a) {
+var Arrow = styled.div(templateObject_1$i || (templateObject_1$i = __makeTemplateObject(["\n  &,\n  &::before {\n    position: absolute;\n    width: 10px;\n    height: 10px;\n    border-radius: 2px;\n    z-index: -1;\n  }\n\n  &::before {\n    content: \"\";\n    transform: rotate(45deg);\n    background: #2b2b40;\n  }\n"], ["\n  &,\n  &::before {\n    position: absolute;\n    width: 10px;\n    height: 10px;\n    border-radius: 2px;\n    z-index: -1;\n  }\n\n  &::before {\n    content: \"\";\n    transform: rotate(45deg);\n    background: #2b2b40;\n  }\n"])));
+var StyledTooltip = styled.div(templateObject_2$c || (templateObject_2$c = __makeTemplateObject(["\n  padding: 16px;\n  font-size: 16px;\n  line-height: 130%;\n  border-radius: 4px;\n  max-width: 320px;\n  z-index: 101;\n  background: #2b2b40;\n  color: #cdcdde;\n  box-shadow: ", ";\n\n  &[data-popper-placement^=\"top\"] > ", " {\n    bottom: -4px;\n  }\n\n  &[data-popper-placement^=\"bottom\"] > ", " {\n    top: -4px;\n  }\n\n  &[data-popper-placement^=\"left\"] > ", " {\n    right: -4px;\n  }\n\n  &[data-popper-placement^=\"right\"] > ", " {\n    left: -4px;\n  }\n"], ["\n  padding: 16px;\n  font-size: 16px;\n  line-height: 130%;\n  border-radius: 4px;\n  max-width: 320px;\n  z-index: 101;\n  background: #2b2b40;\n  color: #cdcdde;\n  box-shadow: ", ";\n\n  &[data-popper-placement^=\"top\"] > ", " {\n    bottom: -4px;\n  }\n\n  &[data-popper-placement^=\"bottom\"] > ", " {\n    top: -4px;\n  }\n\n  &[data-popper-placement^=\"left\"] > ", " {\n    right: -4px;\n  }\n\n  &[data-popper-placement^=\"right\"] > ", " {\n    left: -4px;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.tooltip.boxShadow;
 }, Arrow, Arrow, Arrow, Arrow);
@@ -4583,10 +4574,10 @@ var StyledMenuItem = styled.a(templateObject_2$6 || (templateObject_2$6 = __make
     "\n\n  ",
     "\n\n  &:hover {\n    background: #162031;\n    ", ";\n  }\n"])), function (_a) {
     var theme = _a.theme, $isActive = _a.$isActive;
-    return ($isActive ? theme.colors.contrast : theme.colors.textSubtle);
+    return ($isActive ? theme.colors.textSubtle : theme.colors.secondary);
 }, function (_a) {
     var $isActive = _a.$isActive;
-    return ($isActive ? "600" : "400");
+    return ($isActive ? "400" : "400");
 }, function (_a) {
     var $statusColor = _a.$statusColor, theme = _a.theme;
     return $statusColor &&

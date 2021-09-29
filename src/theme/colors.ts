@@ -51,7 +51,7 @@ export const lightColors: Colors = {
 export const darkColors: Colors = {
   ...baseColors,
   ...additionalColors,
-  secondary: "#9A6AFF",
+  secondary: "#92929f",
   background: "#151521",
   backgroundDisabled: "#1b1b29",
   backgroundAlt: "#1b1b28",
