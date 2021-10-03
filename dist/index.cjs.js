@@ -1944,7 +1944,7 @@ var getBorderColor = function (_a) {
     }
     return theme.colors.cardBorder;
 };
-var StyledCard = styled__default['default'].div(templateObject_3$c || (templateObject_3$c = __makeTemplateObject(["\n  background: ", ";\n  border-radius: ", ";\n  color: ", ";\n  overflow: hidden;\n  position: relative;\n\n  ", "\n\n  padding: 1px 1px 3px 1px;\n\n  ", "\n"], ["\n  background: ", ";\n  border-radius: ", ";\n  color: ", ";\n  overflow: hidden;\n  position: relative;\n\n  ",
+var StyledCard = styled__default['default'].div(templateObject_3$c || (templateObject_3$c = __makeTemplateObject(["\n  // background: ", ";\n  border-radius: ", ";\n  color: ", ";\n  overflow: hidden;\n  position: relative;\n\n  ", "\n\n  padding: 1px 1px 3px 1px;\n\n  ", "\n"], ["\n  // background: ", ";\n  border-radius: ", ";\n  color: ", ";\n  overflow: hidden;\n  position: relative;\n\n  ",
     "\n\n  padding: 1px 1px 3px 1px;\n\n  ", "\n"])), getBorderColor, function (_a) {
     var theme = _a.theme;
     return theme.radii.card;
@@ -4522,17 +4522,17 @@ var socials = [
     {
         label: "Twitter",
         icon: "Twitter",
-        href: "https://twitter.com/pancakeswap",
+        href: "https://twitter.com/cronaswap",
     },
     {
         label: "Telegram",
         icon: "Telegram",
-        href: "https://t.me/pancakeswap",
+        href: "https://t.me/cronaswap",
     },
     {
         label: "Github",
         icon: "Github",
-        href: "https://github.com/pancakeswap/",
+        href: "https://github.com/cronaswap/",
     },
 ];
 __spreadArray([], Array(20)).map(function (_, i) { return ({

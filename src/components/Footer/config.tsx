@@ -79,17 +79,17 @@ export const socials = [
   {
     label: "Twitter",
     icon: "Twitter",
-    href: "https://twitter.com/pancakeswap",
+    href: "https://twitter.com/cronaswap",
   },
   {
     label: "Telegram",
     icon: "Telegram",
-    href: "https://t.me/pancakeswap",
+    href: "https://t.me/cronaswap",
   },
   {
     label: "Github",
     icon: "Github",
-    href: "https://github.com/pancakeswap/",
+    href: "https://github.com/cronaswap/",
   },
 ];
 
